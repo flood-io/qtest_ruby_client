@@ -28,6 +28,9 @@ module SwaggerClient
 
     attr_accessor :redirect_url
 
+    attr_accessor :has_license
+
+    attr_accessor :has_permission
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -36,7 +39,9 @@ module SwaggerClient
         :'logo_url' => :'logo_url',
         :'display_order' => :'display_order',
         :'url' => :'url',
-        :'redirect_url' => :'redirect_url'
+        :'redirect_url' => :'redirect_url',
+        :'has_license' => :'has_license',
+        :'has_permission' => :'has_permission'
       }
     end
 
@@ -47,7 +52,9 @@ module SwaggerClient
         :'logo_url' => :'String',
         :'display_order' => :'Integer',
         :'url' => :'String',
-        :'redirect_url' => :'String'
+        :'redirect_url' => :'String',
+        :'has_license' => :'BOOLEAN',
+        :'has_permission' => :'BOOLEAN'
       }
     end
 
@@ -77,6 +84,14 @@ module SwaggerClient
 
       if attributes.has_key?(:'redirect_url')
         self.redirect_url = attributes[:'redirect_url']
+      end
+
+      if attributes.has_key?(:'has_license')
+        self.has_license = attributes[:'has_license']
+      end
+
+      if attributes.has_key?(:'has_permission')
+        self.has_permission = attributes[:'has_permission']
       end
 
     end
