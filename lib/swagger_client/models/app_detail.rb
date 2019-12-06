@@ -32,6 +32,8 @@ module SwaggerClient
 
     attr_accessor :has_permission
 
+    attr_accessor :app_type
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -41,7 +43,8 @@ module SwaggerClient
         :'url' => :'url',
         :'redirect_url' => :'redirect_url',
         :'has_license' => :'has_license',
-        :'has_permission' => :'has_permission'
+        :'has_permission' => :'has_permission',
+        :'app_type' => :'app_type'
       }
     end
 
@@ -54,7 +57,8 @@ module SwaggerClient
         :'url' => :'String',
         :'redirect_url' => :'String',
         :'has_license' => :'BOOLEAN',
-        :'has_permission' => :'BOOLEAN'
+        :'has_permission' => :'BOOLEAN',
+        :'app_type' => :'String'
       }
     end
 
@@ -94,6 +98,9 @@ module SwaggerClient
         self.has_permission = attributes[:'has_permission']
       end
 
+      if attributes.has_key?(:'app_type')
+        self.app_type = attributes[:'app_type']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
